@@ -1,1 +1,84 @@
-node_modules
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for npm modules
+node_modules/
+
+# Directory for temporary modules
+jspm_packages/
+
+# Bower dependency directories
+bower_components/
+
+# Environment variables file
+.env
+.env.*.local
+
+# Node-wrapped binary files
+*.node
+
+# Build directories
+dist/
+build/
+
+# Static assets cache
+.cache/
+
+# Output of npm pack
+*.tgz
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage directory
+coverage/
+
+# Firebase cache
+.firebase/
+
+# Mac-specific system files
+.AppleDouble
+.LSOverride
+
+# Parcel cache
+.parcel-cache/
+
+# SvelteKit
+.svelte-kit/
+
+# Temporary files
+*.swp
+*.tmp
+*.temp
+~$*
+
+# Others
+*.bak
