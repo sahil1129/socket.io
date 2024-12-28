@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varnika is Best</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrolling for the animation */
+            background-color: #ffcce7; /* Cute pink background */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Center Text */
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff69b4;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            z-index: 2; /* Keep above the animation */
+            text-shadow: 2px 2px 4px #ff99cc;
+        }
+
+        /* Snowflakes */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #ffffff;
+            font-size: 1rem;
+            user-select: none;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        /* Keyframes for snow falling */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Center Text -->
+    <div class="center-text">Varnika is Best</div>
+
+    <script>
+        // Create snowflakes dynamically
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '&#10052;'; // Snowflake symbol (Unicode)
+            
+            // Randomize the snowflake properties
+            snowflake.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            snowflake.style.animationDuration = Math.random() * 3 + 5 + 's'; // Random fall speed (5-8 seconds)
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Random size (10px to 20px)
+
+            document.body.appendChild(snowflake);
+
+            // Remove snowflake after it falls
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000); // 8 seconds to ensure it disappears after falling
+        }
+
+        // Generate snowflakes at intervals
+        setInterval(createSnowflake, 200); // New snowflake every 200ms
+    </script>
+</body>
+</html>
